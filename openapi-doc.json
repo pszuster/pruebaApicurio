@@ -3,5 +3,12 @@
     "info": {
         "title": "prueba",
         "description": "prueba"
+    },
+    "paths": {
+        "/principal": {
+            "get": {
+                "summary": "pepe"
+            }
+        }
     }
 }
