@@ -6,7 +6,10 @@
     },
     "paths": {
         "/rest/services/product": {
-            "get": {},
+            "get": {
+                "summary": "Get Products",
+                "description": "Get Products"
+            },
             "parameters": [
                 {
                     "name": "id",
