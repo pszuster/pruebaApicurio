@@ -1,6 +1,20 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Products"
+        "title": "Products",
+        "version": "1"
+    },
+    "paths": {
+        "/rest/services/product": {
+            "get": {},
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "query",
+                    "description": "Product ID",
+                    "type": "integer"
+                }
+            ]
+        }
     }
 }
