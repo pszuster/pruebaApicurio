@@ -1,1 +1,29 @@
-{"swagger":"2.0","info":{"title":"PRueba","description":"","version":"1.0.0"}}
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "PRueba",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Obter orden do compra",
+        "parameters": [
+          {
+            "name": "orderID",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tudo legal",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
