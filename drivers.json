@@ -1,0 +1,57 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "DriverLicense",
+    "description" : "Driver's Licence API",
+    "version" : "1.0.0"
+  },
+  "paths" : {
+    "/driver/{id}" : {
+      "get" : {
+        "summary" : "Get Driver By ID",
+        "description" : "Get Driver",
+        "responses" : {
+          "200" : {
+            "description" : "Driver",
+            "schema" : {
+              "$ref" : "#/definitions/Driver"
+            },
+            "examples" : {
+              "application/json" : {
+                "driverID" : "1",
+                "FirstName" : "Pepe",
+                "LastName" : "Rodriguez",
+                "ValidLicense" : "yes"
+              }
+            }
+          }
+        }
+      },
+      "parameters" : [ {
+        "name" : "id",
+        "in" : "path",
+        "required" : true,
+        "type" : "string"
+      } ]
+    }
+  },
+  "definitions" : {
+    "Driver" : {
+      "required" : [ "driverID", "FirstName", "LastName", "ValidLicense" ],
+      "properties" : {
+        "driverID" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "ValidLicense" : {
+          "type" : "boolean"
+        }
+      }
+    }
+  }
+}
